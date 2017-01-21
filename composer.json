@@ -1,0 +1,31 @@
+{
+    "name": "ph-7/CompaniesLookup",
+    "description": "Check any companies, competitors, details such as the turnover, director names, shares, etc.",
+    "keywords": ["company, companieshouse, companies house, competitor"],
+    "type": "library",
+    "homepage": "http://ph7.me",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Pierre-Henry Soria",
+            "email": "phs@hizup.net",
+            "homepage": "http://about.ph7.me",
+            "role": "Software Engineer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "symfony/console": "^3.1",
+        "vlucas/phpdotenv": "^2.4",
+        "monolog/monolog": "^1.21",
+        "netsensia/companieshouse-api-php-client": "^0.2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PH7\\CompaniesLookup\\": "src/"
+        }
+    }
+}

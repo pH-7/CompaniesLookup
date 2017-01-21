@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Author:          Pierre-Henry Soria <pierrehenrysoria@gmail.com>
+# Copyright:       (c) 2017, Pierre-Henry Soria. All Rights Reserved.
+# License:         GNU General Public License; <https://www.gnu.org/licenses/gpl-3.0.en.html>
+##
+
+php bin/companies companies:search $1

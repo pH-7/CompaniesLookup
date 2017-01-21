@@ -1,0 +1,42 @@
+#!/usr/bin/env php
+<?php
+/**
+* @author         Pierre-Henry Soria <pierrehenrysoria@gmail.com>
+* @copyright      (c) 2017, Pierre-Henry Soria. All Rights Reserved.
+* @license        GNU General Public License; <https://www.gnu.org/licenses/gpl-3.0.en.html>
+ */
+require __DIR__ . '/../vendor/autoload.php';
+
+// PHP 7+
+use Monolog\{
+    Logger, Handler\StreamHandler
+};
+use Symfony\Component\Console\Application;
+use Dotenv\Dotenv;
+use Netsensia\CompaniesHouse\Api\Client\Client;
+
+use PH7\CompaniesLookup\{
+    Search,
+    Turnover,
+    Directors
+};
+
+$oDotEnv = new Dotenv(dirname(__DIR__));
+$oDotEnv->load();
+
+$oLogger = new Logger('CompaniesLookup');
+$oLogger->pushHandler(new StreamHandler("php://stdout", Logger::DEBUG));
+
+$oApp = new Application(
+    "Welcome to \"Companies House\" lookup console interface.\n\n",
+    '1.0.0'
+);
+
+$oClient = new Client(getenv('COMPANIES_HOUSE_API_KEY'));
+$aCommands = [
+    new Search($oClient)
+];
+
+$oApp->addCommands($aCommands);
+
+$oApp->run();
