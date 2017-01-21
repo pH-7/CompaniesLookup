@@ -11,7 +11,7 @@ I realized there was no such console tools for finding a company from [Companies
 
 * Be sure PHP 7.0 or higher is installed
 
-* Install Composer ([https://getcomposer.org])
+* Install Composer (https://getcomposer.org)
 
 * Then run:
 
@@ -25,7 +25,7 @@ $ composer install
 $ mv .env.example .env
 ```
 
-* Request your Companies House API key => [https://developer.companieshouse.gov.uk/developer/applications]
+* Request your Companies House API key => https://developer.companieshouse.gov.uk/developer/applications
 
 * Open the file (with your favourite text editor)
 
@@ -41,7 +41,7 @@ $ nano .env
 $ chmod u+x ./companies
 ```
 
-* Run the script!
+* Run the script:
 
 ```bash
 $ ./companies <COMPANY_NAME / COMPANY_ID>
@@ -54,11 +54,13 @@ php bin/companies companies:search <COMPANY_NAME / COMPANY_ID>
 #### Example to find HSBC company
 
 With the Company Name:
+
 ```bash
 $ ./companies HSBC
 ```
 
 Or with the Company ID:
+
 ```bash
 $ ./companies 06388542
 ```
