@@ -1,7 +1,7 @@
 {
     "name": "ph-7/CompaniesLookup",
     "description": "Check any companies, competitors, details such as the turnover, director names, shares, etc.",
-    "keywords": ["company, companieshouse, companies house, competitor"],
+    "keywords": ["company", "companieshouse", "companies house", "competitor"],
     "type": "library",
     "homepage": "http://ph7.me",
     "license": "GPL-3.0+",
