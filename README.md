@@ -4,7 +4,7 @@ Simple and fast tool to find companies (from their *Company Number* or *Company 
 
 I realized there was no such console tools for finding a company from [Companies House](https://www.gov.uk/government/organisations/companies-house) database (similar to the *Unix whois command* for finding the domain names' details).
 
-![Find Companies with console interface](companies-lookup-example.png)
+![Find Companies with console interface](assets/companies-lookup-example.png)
 
 
 ## Steup
@@ -66,6 +66,8 @@ $ ./companies 06388542
 ```
 
 * Enjoy!
+
+![Companies House Lookup, real example](assets/CompaniesHouseLookup.gif)
 
 
 ## Requirements
